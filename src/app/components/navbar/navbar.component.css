@@ -1,0 +1,100 @@
+/* logo */
+h2 {
+  padding-left: 0.5rem;
+  padding-top: 0.05rem;
+}
+
+#ocean {
+  color: #66bb22;
+}
+
+/* search input box */
+.inputBox {
+  position: relative;
+  padding-right: 2em;
+}
+
+.input {
+  width: 300px;
+  padding: 10px 40px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.inputBox svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 800px;
+}
+
+/* cart */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37x;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.btn-cart::after {
+  content: attr(data-quantity);
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+  top: 115%;
+}
+
+.icon-cart {
+  width: 20px;
+  height: 27px;
+  transition: 0.2s linear;
+}
+
+.icon-cart path {
+  fill: rgb(0, 0, 0);
+  transition: 0.2s linear;
+}
+
+.btn-cart:hover > .icon-cart {
+  transform: scale(1.2);
+}
+
+.btn-cart:hover > .icon-cart path {
+  fill: rgb(186, 34, 233);
+}
+
+.btn-cart:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: 105%;
+}
+
+.quantity {
+  display: none;
+}
+
+/* user menu dropdown */
+.Signup {
+  margin-right: 10px;
+  margin-left: 10px;
+}
