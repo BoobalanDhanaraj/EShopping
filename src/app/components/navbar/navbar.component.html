@@ -14,9 +14,9 @@
     <a class="navbar-brand" href="#">
       <div class="d-flex align-items-center">
         <img
-          src="https://logodix.com/logo/425836.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2501px-Shopping_cart_icon.svg.png"
           height="40"
-          alt="E Shopping"
+          alt="Ocean Bay"
           loading="lazy"
         />
         <h2>
@@ -60,6 +60,27 @@
     </button>
   </div>
   <div class="Signup">
-    <button class="btn btn-outline-primary">Login</button>
+    <button
+      class="btn btn-light"
+      data-bs-toggle="modal"
+      data-bs-target="#loginModal"
+    >
+      Login
+    </button>
   </div>
 </nav>
+<!-- Login Modol -->
+<div
+  class="modal fade"
+  id="loginModal"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <app-login></app-login>
+      </div>
+    </div>
+  </div>
+</div>
