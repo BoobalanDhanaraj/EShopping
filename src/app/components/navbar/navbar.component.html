@@ -1,71 +1,63 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-mdb-toggle="collapse"
+    data-mdb-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="navbar-brand" href="#">
+      <div class="d-flex align-items-center">
         <img
-          src="https://www.canva.com/design/DAFsKp2Ll4A/view"
-          height="15"
+          src="https://logodix.com/logo/425836.png"
+          height="40"
           alt="E Shopping"
           loading="lazy"
         />
-      </a>
-      <form class="d-flex input-group">
-        <input
-          type="search"
-          class="form-control rounded"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
-        />
-        <span class="input-group-text text-dark border-0" id="search-addon">
-          <i class="fa fa-search"></i>
-        </span>
-      </form>
-    </div>
-    <div class="d-flex align-items-center">
-      <a class="link-secondary me-3" href="#">
-        <i class="fa fa-shopping-cart"></i>
-      </a>
-      <div class="dropdown">
-        <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
-        >
-          <li>
-            <a class="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
+        <h2>
+          <span id="ocean">Ocean</span>
+          <span>Bay</span>
+        </h2>
       </div>
-    </div>
+    </a>
+    <form class="d-flex input-group justify-content-end">
+      <div class="inputBox">
+        <input type="text" placeholder="Search" name="text" class="input" />
+        <svg
+          fill="#000000"
+          width="20px"
+          height="20px"
+          viewBox="0 0 1920 1920"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+    </form>
   </div>
+  <div class="d-flex align-items-center">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Become a Seller</a>
+      </li>
+    </ul>
+    <button data-quantity="0" class="btn-cart">
+      <svg class="icon-cart" viewBox="0 0 24.38 30.52">
+        <path
+          transform="translate(-3.62 -0.85)"
+          d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"
+        ></path>
+      </svg>
+      <span class="quantity"></span>
+    </button>
+  </div>
+  <button class="btn btn-outline-primary">Signup</button>
 </nav>
