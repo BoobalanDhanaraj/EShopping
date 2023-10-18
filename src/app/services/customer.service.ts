@@ -19,4 +19,14 @@ export class CustomerService {
       })
     );
   }
+
+  customerSignup(data: any): Observable<any> {
+    const url = `${this.baseUrl}/Customer/signup`;
+
+    return this.http.post<any>(url, data).pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
 }

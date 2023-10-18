@@ -5,11 +5,11 @@ import { customer } from 'src/app/Models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css'],
 })
-export class LoginComponent {
+export class SignupComponent {
   formValue!: FormGroup;
   CustomerModelObj: customer = new customer();
 
@@ -21,21 +21,23 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
+      firstName: [''],
+      lastName: [''],
       email: [''],
       password: [''],
+      phoneNo: [''],
     });
   }
 
-  onCustomerLogin() {
+  onCustomerSignup() {
+    this.CustomerModelObj.FirstName = this.formValue.value.firstName;
+    this.CustomerModelObj.LastName = this.formValue.value.lastName;
     this.CustomerModelObj.Email = this.formValue.value.email;
     this.CustomerModelObj.Password = this.formValue.value.password;
+    this.CustomerModelObj.Phone = this.formValue.value.phoneNo;
 
-    this.api.customerLogin(this.CustomerModelObj).subscribe((res) => {
+    this.api.customerSignup(this.CustomerModelObj).subscribe((res) => {
       console.log(res);
     });
-  }
-
-  onNavigateSignup() {
-    this.route.navigate(['signup']);
   }
 }
