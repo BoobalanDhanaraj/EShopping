@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <button
     class="navbar-toggler"
     type="button"
@@ -12,10 +12,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <a class="navbar-brand" href="#">
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center" id="logo">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2501px-Shopping_cart_icon.svg.png"
-          height="40"
+          src="https://www.freeiconspng.com/thumbs/cart-icon/cart-icon-16.png"
+          height="60"
           alt="Ocean Bay"
           loading="lazy"
         />
@@ -25,13 +25,13 @@
         </h2>
       </div>
     </a>
-    <form class="d-flex input-group justify-content-end">
+    <form class="d-flex input-group justify-content-start">
       <div class="inputBox">
         <input type="text" placeholder="Search" name="text" class="input" />
         <svg
           fill="#000000"
-          width="20px"
-          height="20px"
+          width="15px"
+          height="15px"
           viewBox="0 0 1920 1920"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -49,23 +49,40 @@
         <a class="nav-link" href="#">Become a Seller</a>
       </li>
     </ul>
-    <button data-quantity="0" class="btn-cart">
-      <svg class="icon-cart" viewBox="0 0 24.38 30.52">
-        <path
-          transform="translate(-3.62 -0.85)"
-          d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"
-        ></path>
-      </svg>
-      <span class="quantity"></span>
-    </button>
+    <div class="cart">
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          fill="none"
+          stroke="currentColor"
+          class="icon"
+        >
+          <circle r="1" cy="21" cx="9"></circle>
+          <circle r="1" cy="21" cx="20"></circle>
+          <path
+            d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+          ></path>
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="Signup">
-    <button
-      class="btn btn-light"
-      data-bs-toggle="modal"
-      data-bs-target="#loginModal"
-    >
-      Login
+    <button class="Btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+      <div class="sign">
+        <svg viewBox="0 0 512 512">
+          <path
+            d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="text">Login</div>
     </button>
   </div>
 </nav>
