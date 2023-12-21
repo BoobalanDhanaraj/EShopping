@@ -9,9 +9,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerService } from './services/customer.service';
 import { SignupComponent } from './components/login/signup/signup.component';
+import { ProductService } from './services/products.service';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, LoginComponent, SignupComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    LoginComponent,
+    SignupComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,7 +26,7 @@ import { SignupComponent } from './components/login/signup/signup.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [CustomerService],
+  providers: [CustomerService, ProductService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
