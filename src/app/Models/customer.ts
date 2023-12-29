@@ -1,7 +1,6 @@
 export class customer {
-  FirstName!: string;
-  LastName!: string;
-  Email!: string;
-  Password!: string;
-  Phone!: string;
+  customerName!: string;
+  email!: string;
+  password!: string;
+  phoneNumber!: string;
 }

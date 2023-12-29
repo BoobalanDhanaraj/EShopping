@@ -12,6 +12,8 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class LoginComponent {
   formValue!: FormGroup;
   CustomerModelObj: customer = new customer();
+  email!: string;
+  password!: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -27,8 +29,8 @@ export class LoginComponent {
   }
 
   onCustomerLogin() {
-    this.CustomerModelObj.Email = this.formValue.value.email;
-    this.CustomerModelObj.Password = this.formValue.value.password;
+    this.CustomerModelObj.email = this.formValue.value.email;
+    this.CustomerModelObj.password = this.formValue.value.password;
 
     this.api.customerLogin(this.CustomerModelObj).subscribe((res) => {
       console.log(res);

@@ -12,8 +12,8 @@ export class HomeComponent {
   constructor(private productApi: ProductService) {}
 
   ngOnInit(): void {
-    this.productApi.getAllProducts().subscribe((res) => {
-      console.log(res);
-    });
+    // this.productApi.getAllProducts().subscribe((res) => {
+    //   console.log(res);
+    // });
   }
 }
