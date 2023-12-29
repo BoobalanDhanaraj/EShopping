@@ -21,8 +21,7 @@ export class SignupComponent {
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
+      customerName: [''],
       email: [''],
       password: [''],
       phoneNo: [''],
@@ -30,11 +29,10 @@ export class SignupComponent {
   }
 
   onCustomerSignup() {
-    this.CustomerModelObj.FirstName = this.formValue.value.firstName;
-    this.CustomerModelObj.LastName = this.formValue.value.lastName;
-    this.CustomerModelObj.Email = this.formValue.value.email;
-    this.CustomerModelObj.Password = this.formValue.value.password;
-    this.CustomerModelObj.Phone = this.formValue.value.phoneNo;
+    this.CustomerModelObj.customerName = this.formValue.value.customerName;
+    this.CustomerModelObj.email = this.formValue.value.email;
+    this.CustomerModelObj.password = this.formValue.value.password;
+    this.CustomerModelObj.phoneNumber = this.formValue.value.phoneNo;
 
     this.api.customerSignup(this.CustomerModelObj).subscribe((res) => {
       console.log(res);
