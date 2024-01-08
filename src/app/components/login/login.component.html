@@ -33,9 +33,17 @@
             </div>
 
             <!-- Submit button -->
-            <button type="button" class="btn btn-primary btn-block mb-4">
+            <button
+              type="button"
+              class="btn btn-primary btn-block mb-4"
+              (click)="onCustomerLogin()"
+            >
               Sign in
             </button>
+            <p class="mb-0 mt-3">
+              Don't have an account?
+              <a href="signup" class="fw-bold">Sign Up</a>
+            </p>
           </form>
         </div>
       </div>
