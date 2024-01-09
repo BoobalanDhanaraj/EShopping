@@ -34,6 +34,11 @@ export class LoginComponent {
 
     this.api.customerLogin(this.CustomerModelObj).subscribe((res) => {
       console.log(res);
+      if (res.isSuccess) {
+        this.route.navigate(['/home']);
+      } else {
+        alert(res.message);
+      }
     });
   }
 
