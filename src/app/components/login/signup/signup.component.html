@@ -1,62 +1,78 @@
-<section class="text-center text-lg-start">
-  <div class="container py-4 justify-content-center">
-    <div class="row g-0 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="card cascading-right">
-          <div class="card-body p-4 shadow-5 text-center">
-            <h2 class="fw-bold mb-4">Sign up now</h2>
-            <form form [formGroup]="formValue">
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="form3Example1">Name</label>
-                    <input
-                      type="text"
-                      id="form3Example1"
-                      class="form-control"
-                      formControlName="customerName"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example3">Email Id</label>
-                <input
-                  type="email"
-                  id="form3Example3"
-                  class="form-control"
-                  formControlName="email"
-                />
-              </div>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example4">Password</label>
-                <input
-                  type="password"
-                  id="form3Example4"
-                  class="form-control"
-                  formControlName="password"
-                />
-              </div>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example4">Phone No</label>
-                <input
-                  id="form3Example4"
-                  class="form-control"
-                  formControlName="phoneNo"
-                />
-              </div>
-              <button
-                type="submit"
-                class="btn btn-primary btn-block mb-4"
-                (click)="onCustomerSignup()"
-              >
-                Sign up
-              </button>
-            </form>
-          </div>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="card">
+      <form class="form" [formGroup]="formValue">
+        <p class="title">Register</p>
+        <p class="message">Signup now and get full access.</p>
+        <div class="flex">
+          <label>
+            <input
+              required
+              placeholder=""
+              type="text"
+              class="input"
+              formControlName="customerName"
+            />
+            <span>Name</span>
+          </label>
         </div>
-      </div>
+
+        <label>
+          <input
+            required
+            placeholder=""
+            type="email"
+            class="input"
+            formControlName="email"
+          />
+          <span>Email</span>
+        </label>
+
+        <label>
+          <input
+            required
+            placeholder=""
+            type="password"
+            class="input"
+            formControlName="password"
+          />
+          <span>Password</span>
+        </label>
+
+        <label>
+          <input
+            required
+            placeholder=""
+            type="password"
+            class="input"
+            formControlName="confirmPassword"
+          />
+          <span>Confirm Password</span>
+          <div *ngIf="passwordsMismatch" id="msg">*Passwords do not match.</div>
+        </label>
+
+        <label>
+          <input
+            required
+            placeholder=""
+            type="text"
+            class="input"
+            formControlName="phoneNo"
+          />
+          <span>Phone Number</span>
+        </label>
+
+        <button
+          class="submit"
+          [disabled]="passwordsMismatch || formValue.invalid"
+          (click)="onCustomerSignup()"
+        >
+          Submit
+        </button>
+        <p class="signin">
+          Already have an account? <a routerLink="/login">Log in</a>
+        </p>
+      </form>
     </div>
   </div>
-  <!-- Jumbotron -->
-</section>
+</div>
